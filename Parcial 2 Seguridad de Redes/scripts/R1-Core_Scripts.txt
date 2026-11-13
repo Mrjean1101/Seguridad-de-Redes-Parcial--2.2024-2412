@@ -1,0 +1,60 @@
+configure terminal
+hostname R1-Core
+ip domain-name itla.local
+
+service password-encryption
+no ip http server
+no ip http secure-server
+logging buffered 4096
+
+enable secret enable123
+username admin secret admin123
+
+aaa new-model
+radius server WIN-NPS
+ address ipv4 10.24.12.10 auth-port 1812 acct-port 1813
+ key RadiusSecret123
+exit
+
+aaa group server radius RAD_GROUP
+ server name WIN-NPS
+exit
+
+aaa authentication login RAD_CON group RAD_GROUP local
+aaa authorization exec RAD_CON group RAD_GROUP local
+
+ip dhcp excluded-address 10.24.12.1 10.24.12.15
+ip dhcp pool LAN_2024_2412
+ network 10.24.12.0 255.255.255.0
+ default-router 10.24.12.1
+ dns-server 10.24.12.10
+exit
+
+interface FastEthernet0/0
+ ip address 10.24.12.1 255.255.255.0
+ no shutdown
+exit
+
+crypto key generate rsa modulus 1024
+ip ssh version 2
+
+line con 0
+ login authentication RAD_CON
+ authorization exec RAD_CON
+ exec-timeout 15 0
+exit
+
+line aux 0
+ login authentication RAD_CON
+ authorization exec RAD_CON
+ exec-timeout 15 0
+exit
+
+line vty 0 4
+ login local
+ transport input ssh
+ exec-timeout 15 0
+exit
+
+end
+write memory

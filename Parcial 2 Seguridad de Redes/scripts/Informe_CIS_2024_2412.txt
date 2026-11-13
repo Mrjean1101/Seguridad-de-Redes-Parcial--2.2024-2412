@@ -1,0 +1,34 @@
+INFORME DE HARDENING CIS - MATRICULA 2024-2412
+Fecha de ejecucion: 2026-11-13 12:55:44
+
+[SUCCESS] Configuracion aplicada y guardada en R1-Core (10.24.12.1)
+configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+R1-Core(config)#service password-encryption
+R1-Core(config)#no ip http server
+R1-Core(config)#no ip http secure-server
+R1-Core(config)#logging buffered 4096
+R1-Core(config)#line con 0
+R1-Core(config-line)#exec-timeout 15 0
+R1-Core(config-line)#exit
+R1-Core(config)#line vty 0 4
+R1-Core(config-line)#exec-timeout 15 0
+R1-Core(config-line)#exit
+R1-Core(config)#end
+R1-Core#
+--------------------------------------------------
+[SUCCESS] Configuracion aplicada y guardada en SW-LAN (10.24.12.2)
+configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+SW-LAN(config)#service password-encryption
+SW-LAN(config)#no ip http server
+SW-LAN(config)#no ip http secure-server
+SW-LAN(config)#logging buffered 4096
+SW-LAN(config)#line con 0
+SW-LAN(config-line)#exec-timeout 15 0
+SW-LAN(config-line)#exit
+SW-LAN(config)#line vty 0 4
+SW-LAN(config-line)#exec-timeout 15 0
+SW-LAN(config-line)#exit
+SW-LAN(config)#end
+SW-LAN#

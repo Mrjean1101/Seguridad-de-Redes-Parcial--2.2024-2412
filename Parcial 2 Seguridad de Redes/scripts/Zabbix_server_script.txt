@@ -1,0 +1,18 @@
+sudo hostnamectl set-hostname Zabbix-Server
+
+sudo tee /etc/netplan/00-installer-config.yaml > /dev/null << 'EOF'
+network:
+  version: 2
+  ethernets:
+    ens33:
+      dhcp4: no
+      addresses:
+        - 10.24.12.11/24
+      gateway4: 10.24.12.1
+      nameservers:
+        addresses:
+          - 10.24.12.10
+          - 8.8.8.8
+EOF
+
+sudo netplan apply
