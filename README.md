@@ -134,37 +134,37 @@ Parcial 2 Seguridad de Redes/
 
 ### Router Core (`R1-Core`)
 
-* **Configuración de Pool DHCP y Asignaciones Activas (`10.24.12.0/24`):**  
-  ![DHCP R1-Core](img/02_r1_dhcp_config.png)
-* **Habilitación de SSHv2 y Restricción en Líneas VTY:**  
-  ![SSH VTY R1-Core](img/03_r1_ssh_vty.png)
-* **Políticas AAA y Grupo RADIUS en Consola/Auxiliar:**  
-  ![AAA RADIUS R1-Core](img/04_r1_aaa_config.png)
-* **Validación de Inicio de Sesión en Consola con Usuario de Dominio (`admin_red`):**  
-  ![Login Consola RADIUS](img/05_r1_consola_radius.png)
+* **`02_r1_dhcp_config` — Configuración de Pool DHCP y Asignaciones Activas (`10.24.12.0/24`):**  
+  ![02_r1_dhcp_config](img/02_r1_dhcp_config.jpg)
+* **`03_r1_ssh_vty` — Habilitación de SSHv2 y Restricción en Líneas VTY:**  
+  ![03_r1_ssh_vty](img/03_r1_ssh_vty.jpg)
+* **`04_r1_aaa_config` — Políticas AAA y Grupo RADIUS en Consola/Auxiliar:**  
+  ![04_r1_aaa_config](img/04_r1_aaa_config.jpg)
+* **`05_r1_consola_radius` — Validación de Inicio de Sesión en Consola con Usuario de Dominio (`admin_red`):**  
+  ![05_r1_consola_radius](img/05_r1_consola_radius.jpg)
 
 ### Switch de Acceso (`SW-LAN`)
 
-* **Usuarios Locales Cifrados y Acceso SSHv2 en `SW-LAN`:**  
-  ![SSH Usuarios Switch](img/06_sw_ssh_usuarios.png)
-* **Configuración de Port-Security (Máximo 2 MACs y Acción Shutdown):**  
-  ![Port-Security Config](img/07_sw_port_security_config.png)
-* **Detección de Violación Port-Security y Estado `err-disabled`:**  
-  ![Port-Security Violación](img/08_sw_port_security_violacion.png)
-* **Configuración de Comunidad SNMP de Solo Lectura:**  
-  ![SNMP Config Switch](img/09_sw_snmp_config.png)
+* **`06_sw_ssh_usuarios` — Usuarios Locales Cifrados y Acceso SSHv2 en `SW-LAN`:**  
+  ![06_sw_ssh_usuarios](img/06_sw_ssh_usuarios.jpg)
+* **`07_sw_port_security_config` — Configuración de Port-Security (Máximo 2 MACs y Acción Shutdown):**  
+  ![07_sw_port_security_config](img/07_sw_port_security_config.jpg)
+* **`08_sw_port_security_violacion` — Detección de Violación Port-Security y Estado `err-disabled`:**  
+  ![08_sw_port_security_violacion](img/08_sw_port_security_violacion.jpg)
+* **`09_sw_snmp_config` — Configuración de Comunidad SNMP de Solo Lectura:**  
+  ![09_sw_snmp_config](img/09_sw_snmp_config.jpg)
 
 ### Servidores y Estaciones de Trabajo (`Windows Server`, `Ubuntu` y `Zabbix`)
 
-* **Usuario `admin_red` y Grupo `Admins_Red` en Active Directory:**  
-  ![Active Directory Usuario](img/10_win_ad_usuario.png)
-* **Política de Red en NPS (`Politica_Routers`) con Atributo de Privilegio 15:**  
-  ![NPS Política RADIUS](img/11_win_nps_politica.png)
-* **Asignación IP por DHCP y Conectividad ICMP desde Ubuntu Desktop:**  
-  ![Ubuntu IP y Pings](img/12_ubuntu_ip_ping.png)
-* **Prueba de Acceso SSH Local y Aislamiento del Usuario RADIUS:**  
-  ![Ubuntu SSH Aislamiento](img/13_ubuntu_ssh.png)
-* **Disponibilidad SNMP del Host `SW-LAN` en Zabbix Server:**  
-  ![Zabbix Host SNMP](img/14_ubuntu_zabbix.png)
-* **Recolección de Métricas en Tiempo Real (*Latest Data*) en Zabbix:**  
-  ![Zabbix Latest Data](img/15_ubuntu_zabbix_latest_data.png)
+* **`10_win_ad_usuario` — Usuario `admin_red` y Grupo `Admins_Red` en Active Directory:**  
+  ![10_win_ad_usuario](img/10_win_ad_usuario.jpg)
+* **`11_win_nps_politica` — Política de Red en NPS (`Politica_Routers`) con Atributo de Privilegio 15:**  
+  ![11_win_nps_politica](img/11_win_nps_politica.jpg)
+* **`12_ubuntu_ip_ping` — Asignación IP por DHCP y Conectividad ICMP desde Ubuntu Desktop:**  
+  ![12_ubuntu_ip_ping](img/12_ubuntu_ip_ping.jpg)
+* **`13_ubuntu_ssh` — Prueba de Acceso SSH Local y Aislamiento del Usuario RADIUS:**  
+  ![13_ubuntu_ssh](img/13_ubuntu_ssh.jpg)
+* **`14_ubuntu_zabbix` — Disponibilidad SNMP del Host `SW-LAN` en Zabbix Server:**  
+  ![14_ubuntu_zabbix](img/14_ubuntu_zabbix.jpg)
+* **`15_ubuntu_zabbix_latest_data` — Recolección de Métricas en Tiempo Real (*Latest Data*) en Zabbix:**  
+  ![15_ubuntu_zabbix_latest_data](img/15_ubuntu_zabbix_latest_data.jpg)
