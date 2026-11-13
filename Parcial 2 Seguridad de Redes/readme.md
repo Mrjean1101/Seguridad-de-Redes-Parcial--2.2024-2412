@@ -4,7 +4,7 @@
 **Matrícula:** `2024-2412`  
 **Institución:** Instituto Tecnológico de Las Américas (ITLA)  
 **Plataforma de Emulación:** PNETLab / VMware Workstation  
-** Link del video a Youtube:** 
+** Link del video a Youtube:** https://youtu.be/f8TylmPIAp0
 
 ---
 
